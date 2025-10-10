@@ -43,7 +43,20 @@ This Streamlit-based app predicts potential engine failures using telemetry from
 
 ## 🧩 Project Structure
 
-xplane_predictive_project/ │ ├── data/ │   ├── processed/ │   │   └── xplane_features.csv │   ├── live_log.csv                # Auto-created log file │ ├── models/ │   ├── xplane_xgboost.pkl │   ├── xplane_lstm.h5 │   └── lstm_scaler.pkl │ ├── src/ │   └── live_app.py                 # Main Streamlit app │ ├── Jenkinsfile                     # CI/CD pipeline for Jenkins ├── requirements.txt └── README.md
+xplane_predictive_project/ 
+│ 
+├── data/ 
+│   
+├── processed/    
+│   └── xplane_features.csv
+│   ├── live_log.csv                
+│   ├── models/ 
+│   ├── xplane_xgboost.pkl 
+│   ├── xplane_lstm.h5 
+│   └── lstm_scaler.pkl 
+├── src/ 
+│   └── live_app.py                 # Main Streamlit app 
+│   ├── Jenkinsfile                     # CI/CD pipeline for Jenkins ├── requirements.txt └── README.md
 
 ---
 
