@@ -16,12 +16,12 @@ from sklearn.metrics import confusion_matrix, roc_curve, auc
 from tensorflow.keras.models import load_model
 
 # ---------- CONFIG / PATHS ----------
-XGB_MODEL_PATH = r"C:\Users\T8630\Desktop\xplane_predictive_project\models\xplane_xgboost.pkl"
-LSTM_MODEL_PATH = r"C:\Users\T8630\Desktop\xplane_predictive_project\models\xplane_lstm.h5"
-SCALER_PATH = r"C:\Users\T8630\Desktop\xplane_predictive_project\models\lstm_scaler.pkl"
-DATA_PATH = r"C:\Users\T8630\Desktop\xplane_predictive_project\data\processed\xplane_features.csv"
+XGB_MODEL_PATH = r"models\xplane_xgboost.pkl"
+LSTM_MODEL_PATH = r"models\xplane_lstm.h5"
+SCALER_PATH = r"models\lstm_scaler.pkl"
+DATA_PATH = r"data\processed\xplane_features.csv"
 DEFAULT_LSTM_TIMESTEPS = 50
-LOG_OUT_PATH = r"C:\Users\T8630\Desktop\xplane_predictive_project\data\live_log.csv"
+LOG_OUT_PATH = r"data\live_log.csv"
 df = pd.read_csv(DATA_PATH)
 p1_max = df["power_1hp"].max()
 p2_max = df["power_2hp"].max()
@@ -678,3 +678,4 @@ if "live_log_df" in st.session_state and not st.session_state.live_log_df.empty:
     st.download_button("📥 Download Log (CSV)", csv_bytes, "live_log.csv", "text/csv")
 st.caption("🛫 Unified Predictive Maintenance Dashboard | XGBoost + LSTM | Real-time + Batch Analysis + Logging + Fault Insights")
 st.sidebar.caption("Made by Kapilesh Simha with ❤️ | 2025")
+
